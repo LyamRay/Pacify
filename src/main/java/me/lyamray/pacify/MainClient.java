@@ -22,37 +22,39 @@ import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.screen.sync.ItemStackHash;
 import net.minecraft.text.Text;
 import net.minecraft.text.TextCodecs;
+import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import me.lyamray.pacify.mixin.accessor.ClientConnectionAccessor;
 
 import java.awt.Color;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class MainClient implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("Pacify");
-    private static final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor(r -> {
-        Thread t = new Thread(r, "Pacify-scheduler");
-        t.setDaemon(true);
-        return t;
-    });
 
     public static KeyBinding restoreScreenKey;
-
+    private static final KeyBinding.Category PACIFY_CATEGORY =
+            KeyBinding.Category.create(Identifier.of("key.categories.pacify"));
     @Override
     public void onInitializeClient() {
         restoreScreenKey = KeyBindingHelper.registerKeyBinding(
-                new KeyBinding("Restore Screen", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_V, "Pacify")
+                new KeyBinding(
+                        "key.pacify.restore_screen",
+                        InputUtil.Type.KEYSYM,
+                        GLFW.GLFW_KEY_V,
+                        PACIFY_CATEGORY
+                )
         );
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (restoreScreenKey.wasPressed()) {
-                if (SharedVariables.storedScreen != null && SharedVariables.storedScreenHandler != null && client.player != null) {
+                if (SharedVariables.storedScreen != null &&
+                        SharedVariables.storedScreenHandler != null &&
+                        client.player != null) {
+
                     client.setScreen(SharedVariables.storedScreen);
                     client.player.currentScreenHandler = SharedVariables.storedScreenHandler;
                 }
@@ -188,9 +190,6 @@ public class MainClient implements ClientModInitializer {
         };
     }
 
-    public static void queueTask(Runnable runnable, long delayMs) {
-        scheduler.schedule(() -> MinecraftClient.getInstance().send(runnable), delayMs, TimeUnit.MILLISECONDS);
-    }
 
     // --- Fabricate Packet Screen ---
 
@@ -273,7 +272,6 @@ public class MainClient implements ClientModInitializer {
         public void render(DrawContext context, int mouseX, int mouseY, float delta) {
             super.render(context, mouseX, mouseY, delta);
             int x = width / 2 - 155, y = 40;
-            Stream.of("Sync Id:", "Revision:", "Slot:", "Button:", "Action:", "Times:").forEach(label -> {});
             context.drawText(textRenderer, "Sync Id:", x, y + 4, 0xFFFFFF, false);
             context.drawText(textRenderer, "Revision:", x, y + 24, 0xFFFFFF, false);
             context.drawText(textRenderer, "Slot:", x, y + 44, 0xFFFFFF, false);
