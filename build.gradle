@@ -59,7 +59,7 @@ jar {
 }
 
 loom {
-	accessWidenerPath = file("src/main/resources/ui_utils.accesswidener")
+	accessWidenerPath = file("src/main/resources/pacify.accesswidener")
 }
 
 // configure the maven publication

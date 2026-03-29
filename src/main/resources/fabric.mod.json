@@ -10,24 +10,24 @@
     "MrBreakNFix"
   ],
   "contact": {
-    "homepage": "https://ui-utils.com",
-    "sources": "https://github.com/Coderx-Gamer/ui-utils"
+    "homepage": "https://hexastudios.net",
+    "sources": "https://github.com/lyamray/pacify"
   },
 
   "license": [
     "CC BY-NC-SA 4.0",
     "The mod may not be uploaded to any mod hosting websites or other platforms, including but not limited to 9minecraft.net, without explicit written permission from MrBreakNFix and Coderx_Gamer. All rights reserved."
   ],
-  "icon": "assets/ui_utils/icon.png",
+  "icon": "assets/pacify/icon.png",
 
   "environment": "client",
   "entrypoints": {
     "client": [
-      "com.ui_utils.MainClient"
+      "me.lyamray.pacify.MainClient"
     ]
   },
   "mixins": [
-    "ui_utils.mixins.json"
+    "pacify.mixins.json"
   ],
 
   "depends": {
@@ -37,7 +37,7 @@
     "java": ">=17"
   },
 
-  "accessWidener": "ui_utils.accesswidener",
+  "accessWidener": "pacify.accesswidener",
 
   "suggests": {
     "another-mod": "*"
