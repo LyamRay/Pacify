@@ -1,5 +1,5 @@
 # Pacify
-GUI packet control mod for Minecraft. Requires Fabric API.
+GUI packet control mod for Minecraft. Requires Fabric API. Made and delivered by [Hexa Studios](https://hexastudios.net)!
 
 ---
 
@@ -8,6 +8,8 @@ GUI packet control mod for Minecraft. Requires Fabric API.
 ---
 
 - Open any inventory / container with the mod, and you should see some buttons and a text field.
+
+![gui](images/gui.png)
 
 - "Close without packet" closes your current GUI (ScreenHandler) without sending a `CloseHandledScreenC2SPacket` to the server. It also automatically saves the GUI so you can restore it with V.
 
@@ -41,7 +43,11 @@ GUI packet control mod for Minecraft. Requires Fabric API.
 
 - When clicking the "Fabricate packet" button you should see a screen appear with two options: "Click Slot" and "Button Click".
 
+![fabricate_choose](images/fabricate_choose.png)
+
 - Clicking "Click Slot" will open the Click Slot packet screen.
+
+![click_slot](images/click_slot.png)
 
 - Enter the "Sync Id" and "Revision" value you see in the in-game GUI (shown top right of any open inventory).
 
@@ -71,6 +77,8 @@ GUI packet control mod for Minecraft. Requires Fabric API.
 - `ButtonClickC2SPacket`(s) are what the client sends to the server when clicking a button in a server-side GUI (e.g. clicking an enchantment in an enchantment table).
 
 - Clicking "Button Click" will open the Button Click packet screen.
+
+![button_click](images/button_click.png)
 
 - Enter the "Sync Id" field as the sync id value shown top right in the in-game GUI.
 

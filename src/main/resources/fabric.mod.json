@@ -18,7 +18,7 @@
     "CC BY-NC-SA 4.0",
     "The mod may not be uploaded to any mod hosting websites or other platforms, including but not limited to 9minecraft.net, without explicit written permission from MrBreakNFix and Coderx_Gamer. All rights reserved."
   ],
-  "icon": "assets/pacify/icon.png",
+  "icon": "assets/pacify/logo.png",
 
   "environment": "client",
   "entrypoints": {
