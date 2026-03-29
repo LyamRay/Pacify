@@ -1,6 +1,14 @@
 # Pacify
 GUI packet control mod for Minecraft. Requires Fabric API. Made and delivered by [Hexa Studios](https://hexastudios.net)!
 
+## Latest changes:
+
+---
+
+- Added dialog screen support.
+- Planned releases for Minecraft 1.21.8, 1.21.9, 1.21.10, 1.21.11 and the upcoming 26.1 update.
+- Added a command to toggle the in-game GUI rendering on and off.
+- Rewrote the entire codebase from scratch, improving code quality and maintainability (from the original UI-Utils codebase).
 ---
 
 # How to use:
