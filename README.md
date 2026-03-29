@@ -1,3 +1,5 @@
+![logo](images/pacify_logo_v10.svg)
+
 # Pacify
 GUI packet control mod for Minecraft. Requires Fabric API. Made and delivered by [Hexa Studios](https://hexastudios.net)!
 
