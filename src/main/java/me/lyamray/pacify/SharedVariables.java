@@ -18,4 +18,7 @@ public class SharedVariables {
 
     public static Screen storedScreen = null;
     public static ScreenHandler storedScreenHandler = null;
+
+    public static double estimatedTPS = 20.0;
+    public static long lastTimeUpdate = System.currentTimeMillis();
 }

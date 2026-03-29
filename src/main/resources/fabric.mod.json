@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "ui-utils",
+  "id": "pacify",
   "version": "${version}",
 
-  "name": "UI Utils",
+  "name": "Pacify",
   "description": "Plugin debugging mod.",
   "authors": [
-    "Coderx_Gamer",
-    "MrBreakNFix"
+    "LyamRay"
   ],
   "contact": {
     "homepage": "https://hexastudios.net",
@@ -16,7 +15,7 @@
 
   "license": [
     "CC BY-NC-SA 4.0",
-    "The mod may not be uploaded to any mod hosting websites or other platforms, including but not limited to 9minecraft.net, without explicit written permission from MrBreakNFix and Coderx_Gamer. All rights reserved."
+    "The mod may not be uploaded to any mod hosting websites or other platforms, including but not limited to 9minecraft.net, without explicit written permission from LyamRay. All rights reserved."
   ],
   "icon": "assets/pacify/logo.png",
 
@@ -31,9 +30,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.16.9",
+    "fabricloader": ">=0.18.5",
     "fabric": "*",
-    "minecraft": ["~1.21.6"],
+    "minecraft": ["~1.21.9"],
     "java": ">=17"
   },
 

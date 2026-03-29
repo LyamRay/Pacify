@@ -1,5 +1,6 @@
 package me.lyamray.pacify.mixin;
 
+import me.lyamray.pacify.ChatFieldFactory;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.dialog.DialogScreen;
@@ -9,7 +10,6 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import me.lyamray.pacify.ChatFieldFactory;
 import me.lyamray.pacify.MainClient;
 import me.lyamray.pacify.SharedVariables;
 
