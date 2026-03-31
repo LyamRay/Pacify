@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "pacify",
+  "version": "${version}",
+
+  "name": "Pacify",
+  "description": "A GUI packet control mod for Minecraft that provides advanced control over GUI interactions and packet sending.",
+  "authors": [
+    "LyamRay"
+  ],
+  "contact": {
+    "homepage": "https://hexastudios.net",
+    "sources": "https://github.com/lyamray/pacify"
+  },
+
+  "license": [
+    "CC BY-NC-SA 4.0",
+    "The mod may not be uploaded to any mod hosting websites or other platforms, without explicit written permission from LyamRay. All rights reserved."
+  ],
+  "icon": "assets/pacify/logo.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.lyamray.pacify.MainClient"
+    ]
+  },
+  "mixins": [
+    "pacify.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.18.5",
+    "fabric": "*",
+    "minecraft": ["~1.21.9"],
+    "java": ">=17"
+  },
+
+  "accessWidener": "pacify.accesswidener",
+
+  "suggests": {
+    "another-mod": "*"
+  },
+
+  "breaks": {
+    "modernfix": "*",
+    "wurst": "*",
+    "essential": "*"
+  },
+
+  "custom": {
+    "modmenu:clientsideOnly": true,
+    "modmenu:api": false
+  }
+}

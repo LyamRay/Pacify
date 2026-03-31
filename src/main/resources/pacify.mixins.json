@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.lyamray.pacify.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "BookEditScreenMixin",
+    "BookScreenMixin",
+    "ChatScreenMixin",
+    "ClientCommonNetworkHandlerMixin",
+    "ClientConnectionMixin",
+    "DialogScreenMixin",
+    "HandledScreenMixin",
+    "MultiplayerScreenMixin",
+    "ScreenMixin",
+    "SignEditScreenMixin",
+    "SleepingChatScreenMixin",
+    "accessor.ClientConnectionAccessor",
+    "accessor.ScreenAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
